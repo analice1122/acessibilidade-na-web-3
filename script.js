@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 botaoDeAcessibilidade.addEventListener('click', function (){
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
     const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
 const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
